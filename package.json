@@ -49,7 +49,7 @@
   "main": "lib/index.js",
   "oclif": {
     "commands": "./lib/commands",
-    "bin": "hoonyc",
+    "bin": "hnc",
     "plugins": [
       "@oclif/plugin-help"
     ]
