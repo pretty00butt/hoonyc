@@ -31,15 +31,6 @@ export default class Add extends Command {
       config[appName][targetEnv] = {}
       const appConfig = config[appName][targetEnv]
 
-      if (auth === "1") {
-        appConfig.username = yield prompt(`Username: `)
-        appConfig.password = yield prompt(`Password: `)
-      } else {
-        appConfig.privateKey = yield prompt(
-          `Private Key Path: (/path/to/private/key.pem)`
-        )
-      }
-
       appConfig.authType = yield prompt(
         `Authorization (1: username, password 2: private key): `
       )

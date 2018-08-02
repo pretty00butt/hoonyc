@@ -17,7 +17,7 @@ export default class Deploy extends Command {
   async run() {
     const { flags } = this.parse(Deploy)
 
-    const { app, env } = flags
+    const { app = "", env = "" } = flags
     const _config = load()
     const config = _config[app][env]
     this.log(env)
