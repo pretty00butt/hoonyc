@@ -15,10 +15,78 @@ hoonyc is a collection of commands that hoony uses
 # Usage
 
 <!-- usage -->
+```sh-session
+$ npm install -g hoonyc
+$ hoonyc COMMAND
+running command...
+$ hoonyc (-v|--version|version)
+hoonyc/0.2.0 darwin-x64 node-v8.11.3
+$ hoonyc --help [COMMAND]
+USAGE
+  $ hoonyc COMMAND
+...
+```
+<!-- usagestop -->
 
 # Commands
 
 <!-- commands -->
+* [`hoonyc add`](#hoonyc-add)
+* [`hoonyc deploy [FILE]`](#hoonyc-deploy-file)
+* [`hoonyc help [COMMAND]`](#hoonyc-help-command)
+
+## `hoonyc add`
+
+Add a new app
+
+```
+USAGE
+  $ hoonyc add
+
+OPTIONS
+  -a, --app=app  App Name
+  -e, --env=env  Environment
+  -h, --help     show CLI help
+
+EXAMPLE
+  $ hnc add --app hnc --env dev
+```
+
+_See code: [src/commands/add.ts](https://github.com/the6thm0nth/hoonyc/blob/v0.2.0/src/commands/add.ts)_
+
+## `hoonyc deploy [FILE]`
+
+describe the command here
+
+```
+USAGE
+  $ hoonyc deploy [FILE]
+
+OPTIONS
+  -a, --app=app  App Name
+  -e, --env=env  Environment to deploy
+  -h, --help     show CLI help
+```
+
+_See code: [src/commands/deploy.ts](https://github.com/the6thm0nth/hoonyc/blob/v0.2.0/src/commands/deploy.ts)_
+
+## `hoonyc help [COMMAND]`
+
+display help for hoonyc
+
+```
+USAGE
+  $ hoonyc help [COMMAND]
+
+ARGUMENTS
+  COMMAND  command to show help for
+
+OPTIONS
+  --all  see all commands in CLI
+```
+
+_See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v2.0.5/src/commands/help.ts)_
+<!-- commandsstop -->
 
 # LICENSE
 
