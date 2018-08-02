@@ -14,8 +14,6 @@ export default class Deploy extends Command {
     env: flags.string({ char: "e", description: "Environment to deploy" })
   }
 
-  static args = [{ name: "file" }]
-
   async run() {
     const { flags } = this.parse(Deploy)
 
