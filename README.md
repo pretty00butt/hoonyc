@@ -17,13 +17,13 @@ hoonyc is a collection of commands that hoony uses
 <!-- usage -->
 ```sh-session
 $ npm install -g hoonyc
-$ hoonyc COMMAND
+$ hnc COMMAND
 running command...
-$ hoonyc (-v|--version|version)
-hoonyc/0.4.0 darwin-x64 node-v8.11.3
-$ hoonyc --help [COMMAND]
+$ hnc (-v|--version|version)
+hoonyc/0.4.1 darwin-x64 node-v8.11.3
+$ hnc --help [COMMAND]
 USAGE
-  $ hoonyc COMMAND
+  $ hnc COMMAND
 ...
 ```
 <!-- usagestop -->
@@ -31,17 +31,17 @@ USAGE
 # Commands
 
 <!-- commands -->
-* [`hoonyc add`](#hoonyc-add)
-* [`hoonyc deploy`](#hoonyc-deploy)
-* [`hoonyc help [COMMAND]`](#hoonyc-help-command)
+* [`hnc add`](#hnc-add)
+* [`hnc deploy`](#hnc-deploy)
+* [`hnc help [COMMAND]`](#hnc-help-command)
 
-## `hoonyc add`
+## `hnc add`
 
 Add a new app
 
 ```
 USAGE
-  $ hoonyc add
+  $ hnc add
 
 OPTIONS
   -a, --app=app  App Name
@@ -52,15 +52,15 @@ EXAMPLE
   $ hnc add --app hnc --env dev
 ```
 
-_See code: [src/commands/add.ts](https://github.com/the6thm0nth/hoonyc/blob/v0.4.0/src/commands/add.ts)_
+_See code: [src/commands/add.ts](https://github.com/the6thm0nth/hoonyc/blob/v0.4.1/src/commands/add.ts)_
 
-## `hoonyc deploy`
+## `hnc deploy`
 
 describe the command here
 
 ```
 USAGE
-  $ hoonyc deploy
+  $ hnc deploy
 
 OPTIONS
   -a, --app=app  App Name
@@ -68,15 +68,15 @@ OPTIONS
   -h, --help     show CLI help
 ```
 
-_See code: [src/commands/deploy.ts](https://github.com/the6thm0nth/hoonyc/blob/v0.4.0/src/commands/deploy.ts)_
+_See code: [src/commands/deploy.ts](https://github.com/the6thm0nth/hoonyc/blob/v0.4.1/src/commands/deploy.ts)_
 
-## `hoonyc help [COMMAND]`
+## `hnc help [COMMAND]`
 
-display help for hoonyc
+display help for hnc
 
 ```
 USAGE
-  $ hoonyc help [COMMAND]
+  $ hnc help [COMMAND]
 
 ARGUMENTS
   COMMAND  command to show help for
