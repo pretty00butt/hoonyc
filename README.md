@@ -12,39 +12,13 @@ hoonyc is a collection of commands that hoony uses
 [![Downloads/week](https://img.shields.io/npm/dw/hoonyc.svg)](https://npmjs.org/package/hoonyc)
 [![License](https://img.shields.io/npm/l/hoonyc.svg)](https://github.com/the6thm0nth/hoonyc/blob/master/package.json)
 
-<!-- toc -->
-* [hoonyc](#hoonyc)
-* [Usage](#usage)
-* [LICENSE](#license)
-<!-- tocstop -->
-
 # Usage
 
 <!-- usage -->
-```sh-session
-$ npm install -g hoonyc
-$ hoonyc COMMAND
-running command...
-$ hoonyc (-v|--version|version)
-hoonyc/0.1.0 darwin-x64 node-v8.11.3
-$ hoonyc --help [COMMAND]
-USAGE
-  $ hoonyc COMMAND
-...
-```
-<!-- usagestop -->
 
-## add
+# Commands
 
-```sh
-hnc add --app app --env dev
-```
-
-## deploy
-
-```sh
-hnc deploy --app app --env dev
-```
+<!-- commands -->
 
 # LICENSE
 
