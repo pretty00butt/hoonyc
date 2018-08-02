@@ -20,7 +20,7 @@ $ npm install -g hoonyc
 $ hoonyc COMMAND
 running command...
 $ hoonyc (-v|--version|version)
-hoonyc/0.2.0 darwin-x64 node-v8.11.3
+hoonyc/0.3.0 darwin-x64 node-v8.11.3
 $ hoonyc --help [COMMAND]
 USAGE
   $ hoonyc COMMAND
@@ -32,7 +32,7 @@ USAGE
 
 <!-- commands -->
 * [`hoonyc add`](#hoonyc-add)
-* [`hoonyc deploy [FILE]`](#hoonyc-deploy-file)
+* [`hoonyc deploy`](#hoonyc-deploy)
 * [`hoonyc help [COMMAND]`](#hoonyc-help-command)
 
 ## `hoonyc add`
@@ -52,15 +52,15 @@ EXAMPLE
   $ hnc add --app hnc --env dev
 ```
 
-_See code: [src/commands/add.ts](https://github.com/the6thm0nth/hoonyc/blob/v0.2.0/src/commands/add.ts)_
+_See code: [src/commands/add.ts](https://github.com/the6thm0nth/hoonyc/blob/v0.3.0/src/commands/add.ts)_
 
-## `hoonyc deploy [FILE]`
+## `hoonyc deploy`
 
 describe the command here
 
 ```
 USAGE
-  $ hoonyc deploy [FILE]
+  $ hoonyc deploy
 
 OPTIONS
   -a, --app=app  App Name
@@ -68,7 +68,7 @@ OPTIONS
   -h, --help     show CLI help
 ```
 
-_See code: [src/commands/deploy.ts](https://github.com/the6thm0nth/hoonyc/blob/v0.2.0/src/commands/deploy.ts)_
+_See code: [src/commands/deploy.ts](https://github.com/the6thm0nth/hoonyc/blob/v0.3.0/src/commands/deploy.ts)_
 
 ## `hoonyc help [COMMAND]`
 
