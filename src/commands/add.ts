@@ -37,7 +37,6 @@ export default class Add extends Command {
 
       if (appConfig.authType === "1") {
         appConfig.username = yield prompt(`Username: `)
-        appConfig.password = yield prompt(`Password: `)
       } else {
         appConfig.privateKey = yield prompt(
           `Private Key Path: (/path/to/private/key.pem)`
@@ -46,7 +45,6 @@ export default class Add extends Command {
       appConfig.host = yield prompt(`Server Host: `)
       appConfig.username = yield prompt(`Server Username: `)
       appConfig.githubUsername = yield prompt(`Github Username: `)
-      appConfig.githubPassword = yield prompt(`Github Password: `)
 
       save(config)
       process.exit(1)
