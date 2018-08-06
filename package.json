@@ -11,6 +11,7 @@
     "@oclif/command": "^1",
     "@oclif/config": "^1",
     "@oclif/plugin-help": "^2",
+    "chalk": "^2.4.1",
     "co": "^4.6.0",
     "co-prompt": "^1.0.0",
     "ssh2": "^0.6.1",
