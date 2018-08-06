@@ -20,7 +20,7 @@ $ npm install -g hoonyc
 $ hnc COMMAND
 running command...
 $ hnc (-v|--version|version)
-hoonyc/0.4.1 darwin-x64 node-v8.11.3
+hoonyc/0.5.0 darwin-x64 node-v8.11.3
 $ hnc --help [COMMAND]
 USAGE
   $ hnc COMMAND
@@ -31,36 +31,16 @@ USAGE
 # Commands
 
 <!-- commands -->
-* [`hnc add`](#hnc-add)
-* [`hnc deploy`](#hnc-deploy)
+* [`hnc deploy [COMMAND]`](#hnc-deploy-command)
 * [`hnc help [COMMAND]`](#hnc-help-command)
 
-## `hnc add`
-
-Add a new app
-
-```
-USAGE
-  $ hnc add
-
-OPTIONS
-  -a, --app=app  App Name
-  -e, --env=env  Environment
-  -h, --help     show CLI help
-
-EXAMPLE
-  $ hnc add --app hnc --env dev
-```
-
-_See code: [src/commands/add.ts](https://github.com/the6thm0nth/hoonyc/blob/v0.4.1/src/commands/add.ts)_
-
-## `hnc deploy`
+## `hnc deploy [COMMAND]`
 
 describe the command here
 
 ```
 USAGE
-  $ hnc deploy
+  $ hnc deploy [COMMAND]
 
 OPTIONS
   -a, --app=app  App Name
@@ -68,7 +48,7 @@ OPTIONS
   -h, --help     show CLI help
 ```
 
-_See code: [src/commands/deploy.ts](https://github.com/the6thm0nth/hoonyc/blob/v0.4.1/src/commands/deploy.ts)_
+_See code: [src/commands/deploy.ts](https://github.com/the6thm0nth/hoonyc/blob/v0.5.0/src/commands/deploy.ts)_
 
 ## `hnc help [COMMAND]`
 
