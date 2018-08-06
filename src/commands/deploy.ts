@@ -1,12 +1,17 @@
 import { Command, flags } from "@oclif/command"
-import co from "co"
-import { password } from "co-prompt"
+import chalk from "chalk"
 
 import { load } from "../lib/config"
-import deploy from "../lib/deploy"
+// import deploy from "../lib/deploy"
+
+// Commands
+import add from "../lib/deploy/add"
+import push from "../lib/deploy/push"
 
 export default class Deploy extends Command {
   static description = "describe the command here"
+
+  static args = [{ name: "command" }]
 
   static flags = {
     help: flags.help({ char: "h" }),
@@ -17,23 +22,62 @@ export default class Deploy extends Command {
   }
 
   async run() {
-    const { flags } = this.parse(Deploy)
-    const log = this.log
+    const { args, flags } = this.parse(Deploy)
+    // const log = this.log
 
     const { app = "", env = "" } = flags
-    const _config = load()
-    const config = _config[app][env]
+    const { command } = args
 
-    co(function*() {
-      const githubPassword = yield password("Github Password: ")
+    const config = load()
 
-      deploy({
-        app,
-        env,
-        log,
-        githubPassword,
-        ...config
-      })
-    })
+    // Message
+    this.showMessage({ command, app, env, config })
+
+    // Action
+    this.runCommand({ command, app, env, config })
+  }
+
+  showMessage({ command, app, env }) {
+    switch (command) {
+      case "add":
+        this.log(
+          chalk.blue(`➕ Add ${app} to the list of hoonyc deployment apps...`)
+        )
+        break
+      case "push":
+        this.log(chalk.blue(`⬆️ Push ${app} to your ${env} server...`))
+        break
+      default:
+        this.error(`${command} is the command that is not supported yet.`)
+    }
+  }
+
+  runCommand({ command, app, env, config }) {
+    // Action
+    switch (command) {
+      case "add":
+        add({
+          app,
+          env,
+          printLog: this.log,
+          printError: this.error,
+          exit: this.exit,
+          config
+        })
+        break
+      case "push":
+        push({
+          app,
+          env,
+          printLog: this.log,
+          printError: this.error,
+          exit: this.exit,
+          ...config[app][env]
+        })
+        break
+      default:
+        this.error(`${command} is the command that is not supported yet.`)
+        self.exit()
+    }
   }
 }
