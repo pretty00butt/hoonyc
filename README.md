@@ -20,7 +20,7 @@ $ npm install -g hoonyc
 $ hnc COMMAND
 running command...
 $ hnc (-v|--version|version)
-hoonyc/0.6.0 darwin-x64 node-v8.11.3
+hoonyc/0.7.0 darwin-x64 node-v8.11.3
 $ hnc --help [COMMAND]
 USAGE
   $ hnc COMMAND
@@ -48,7 +48,7 @@ OPTIONS
   -h, --help     show CLI help
 ```
 
-_See code: [src/commands/deploy.ts](https://github.com/the6thm0nth/hoonyc/blob/v0.6.0/src/commands/deploy.ts)_
+_See code: [src/commands/deploy.ts](https://github.com/the6thm0nth/hoonyc/blob/v0.7.0/src/commands/deploy.ts)_
 
 ## `hnc help [COMMAND]`
 
