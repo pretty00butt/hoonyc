@@ -31,13 +31,21 @@ export default class Deploy extends Command {
     const config = load()
 
     // Message
-    this.showMessage({ command, app, env, config })
+    this.showMessage({ command, app, env })
 
     // Action
     this.runCommand({ command, app, env, config })
   }
 
-  showMessage({ command, app, env }) {
+  showMessage({
+    command,
+    app,
+    env
+  }: {
+    command: string
+    app: string
+    env: string
+  }) {
     switch (command) {
       case "add":
         this.log(
@@ -52,16 +60,23 @@ export default class Deploy extends Command {
     }
   }
 
-  runCommand({ command, app, env, config }) {
+  runCommand({
+    command,
+    app,
+    env,
+    config
+  }: {
+    command: string
+    app: string
+    env: string
+    config: object
+  }) {
     // Action
     switch (command) {
       case "add":
         add({
           app,
           env,
-          printLog: this.log,
-          printError: this.error,
-          exit: this.exit,
           config
         })
         break
@@ -77,7 +92,7 @@ export default class Deploy extends Command {
         break
       default:
         this.error(`${command} is the command that is not supported yet.`)
-        self.exit()
+        this.exit()
     }
   }
 }

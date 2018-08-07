@@ -7,6 +7,9 @@ interface AddParams {
   app: string
   env: string
   config: any
+  printLog?: object
+  printError?: object
+  exit?: object
 }
 
 export default ({ app, env, config }: AddParams) => {
