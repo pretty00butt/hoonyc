@@ -2,11 +2,13 @@ import { Command, flags } from "@oclif/command"
 import chalk from "chalk"
 
 import { load } from "../lib/config"
-// import deploy from "../lib/deploy"
 
 // Commands
 import add from "../lib/deploy/add"
 import push from "../lib/deploy/push"
+
+// Types
+import AppConfig from "../types/app-config"
 
 export default class Deploy extends Command {
   static description = "describe the command here"
@@ -81,19 +83,20 @@ export default class Deploy extends Command {
         })
         break
       case "push":
-        const appConfig = ((config as object)[app] as object)[env] as object
+        const appConfig = ((config as any)[app] as any)[env] as AppConfig
 
         push({
           app,
           printLog: this.log,
           printError: this.error,
           exit: this.exit,
-          authType: appConfig.authType,
-          host: appConfig.host,
-          username: appConfig.username,
-          privateKey: appConfig.privateKey,
-          remotePath: appConfig.remotePath,
-          githubUsername: appConfig.githubUsername
+          ...appConfig
+          // authType: appConfig.authType,
+          // host: appConfig.host,
+          // username: appConfig.username,
+          // privateKey: appConfig.privateKey,
+          // remotePath: appConfig.remotePath,
+          // githubUsername: appConfig.githubUsername
         })
         break
       default:
