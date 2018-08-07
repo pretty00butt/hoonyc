@@ -81,11 +81,10 @@ export default class Deploy extends Command {
         })
         break
       case "push":
-        const appConfig = config[app][env]
+        const appConfig = ((config as object)[app] as object)[env] as object
 
         push({
           app,
-          env,
           printLog: this.log,
           printError: this.error,
           exit: this.exit,
