@@ -17,7 +17,6 @@ interface DeployParams {
   authType: string
   host: string
   username?: string
-  password?: string
   privateKey?: string
   remotePath: string
   githubUsername: string
@@ -32,7 +31,6 @@ export default ({
   authType = "1",
   host = "",
   username = "",
-  // password = "",
   privateKey = "",
   remotePath = "",
   githubUsername = "",

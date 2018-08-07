@@ -81,13 +81,20 @@ export default class Deploy extends Command {
         })
         break
       case "push":
+        const appConfig = config[app][env]
+
         push({
           app,
           env,
           printLog: this.log,
           printError: this.error,
           exit: this.exit,
-          ...config[app][env]
+          authType: appConfig.authType,
+          host: appConfig.host,
+          username: appConfig.username,
+          privateKey: appConfig.privateKey,
+          remotePath: appConfig.remotePath,
+          githubUsername: appConfig.githubUsername
         })
         break
       default:
