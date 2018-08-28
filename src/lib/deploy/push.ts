@@ -19,6 +19,7 @@ interface DeployParams {
   username?: string
   privateKey?: string
   remotePath: string
+  command: string
   githubUsername: string
   githubPassword?: string
   printLog?: any
@@ -34,6 +35,7 @@ export default ({
   privateKey = "",
   remotePath = "",
   githubUsername = "",
+  command = "",
   printLog,
   printError,
   exit
@@ -79,7 +81,7 @@ export default ({
               printError(`STDERR: ${data}`)
             })
           stream.write(`cd ${remotePath}\n`)
-          stream.write(`git pull && yarn && yarn build && pm2 reload ${app}\n`)
+          stream.write(`${command}`)
         })
       })
     })
