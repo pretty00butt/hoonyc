@@ -5,4 +5,5 @@ export default interface AppConfig {
   privateKey: string
   remotePath: string
   githubUsername: string
+  command?: string
 }

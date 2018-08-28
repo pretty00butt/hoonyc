@@ -19,7 +19,7 @@ interface DeployParams {
   username?: string
   privateKey?: string
   remotePath: string
-  command: string
+  command?: string
   githubUsername: string
   githubPassword?: string
   printLog?: any
